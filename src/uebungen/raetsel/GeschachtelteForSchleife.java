@@ -5,15 +5,22 @@ package uebungen.raetsel;
  */
 public class GeschachtelteForSchleife {
     public static void main(String[] args) {
-        String asterix = "*";
-        System.out.println("For-Schleife");
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(asterix.repeat(i));
+        int loops = 5;
+        for (int i = 1; i <= loops; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
         }
-        System.out.println("While-Schleife");
+        System.out.println("\n"+"While-Schleife");
         int i = 0;
-        while (i < 5) {
-            System.out.println(asterix.repeat(i+1));
+        while (i <= 5) {
+            int j = 0;
+            while (j<i) {
+                System.out.print("*");
+                j++;
+            }
+            System.out.print("\n");
             i++;
         }
 
